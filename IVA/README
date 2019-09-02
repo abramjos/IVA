@@ -1,0 +1,19 @@
+------------------------------------------------
+IVA model to deliver Car Make/Color/Type models out of deepstream environment with detector.
+------------------------------------------------
+
+The detector is a ssd-300 and not optmized using tensorrt and the rest of models are
+optimized using tensorrt engine. Each modules are classes so that the deployement can be eased. 
+
+Dependencies:
+1. CUDA9.2 + Cudnn # kindly note that CUDA9.2 is a hard requirement.
+2. TensorRT and pycuda for optimization 
+3. TensorFlow
+4. Keras
+5. Opencv
+6. Numpy
+
+usage:
+
+    python infer_iva.py -i input_image_path -o output_npy_path
+

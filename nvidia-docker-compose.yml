@@ -1,0 +1,28 @@
+services:
+  redis:
+    devices:
+    - /dev/nvidia0
+    - /dev/nvidia1
+    - /dev/nvidiactl
+    - /dev/nvidia-uvm
+    - /dev/nvidia-uvm-tools
+    image: redis:alpine
+    volumes:
+    - nvidia_driver_410.93:/usr/local/nvidia:ro
+  web:
+    build: .
+    devices:
+    - /dev/nvidia0
+    - /dev/nvidia1
+    - /dev/nvidiactl
+    - /dev/nvidia-uvm
+    - /dev/nvidia-uvm-tools
+    ports:
+    - 5000:5000
+    volumes:
+    - ./r_iva:/apps
+    - nvidia_driver_410.93:/usr/local/nvidia:ro
+version: '3'
+volumes:
+  nvidia_driver_410.93:
+    external: true
