@@ -1,3 +1,4 @@
+import system
 import cv2
 import json
 import numpy as np
@@ -8,6 +9,9 @@ import time
 class load_ssd():
   def __init__(self,pb_file="./tf_ssd.pb",required_class=[2,6,7,14],conf=.5, img_height = 300,img_width = 300):
     self.sess=tf.Session()
+    if (os.path.isfile('./tf_ssd.pb') == False):
+        print("Downloading tensorflow ssd weights for detection")
+        os.system('wget -O ./tf_ssd.pb https://www.dropbox.com/s/reg9e9sa1thovgt/tf_ssd.pb?dl=0')
     self.im_h=300
     self.im_w=300
     self.conf=conf
