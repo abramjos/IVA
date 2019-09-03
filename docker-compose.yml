@@ -1,12 +1,11 @@
-version: '3'
-
+version: '2.3'
 services:
   web:
+    runtime : nvidia
     build: .
     ports:
       - "5000:5000"
     volumes:
       - ./r_iva:/apps
-
   redis:
     image: "redis:alpine"
