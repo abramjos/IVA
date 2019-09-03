@@ -1,4 +1,4 @@
-# IVA
+# Video Analatics using Docker Containers
 Video analytics for vehicle using tensorRT and API serving within a docker container.
 This demonstrates dockerized REST APIs for CNN model using Redis. 
  
@@ -27,3 +27,4 @@ You can replace the models with the finetuned models on your dataset. You can sw
  * Vehicle Make,Color and Type - Resnet model pretrained in tensorRT
  * ANPR - WPOD Net for detection of licence plate and yolo(darknet) for character recognition
 
+## 
