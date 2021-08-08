@@ -1,4 +1,4 @@
-# Video Analyatics using Docker Containers
+# Video Analytics using Docker Containers
 Video analytics for vehicle using tensorRT and API serving within a docker container.
 This demonstrates dockerized REST APIs for CNN model using Redis. 
  
